@@ -18,7 +18,3 @@
 - Add navigation by new nav item in Header component.
 - Add new page component in App.tsx
   - Route component link to the page them.
-
-- I will add favicon.
-
-Finished laidback eats website.
