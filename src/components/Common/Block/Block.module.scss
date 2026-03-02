@@ -1,0 +1,39 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss' as *;
+
+/* ===========================
+* Discover upcoming block
+============================== */
+.discover {
+  background-image: url('../../../assets/images/events/image-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: clamp(250px, 300px, 320px);
+  display: grid;
+  place-content: center;
+
+  &__header {
+    padding: 10px;
+    color: $color-primary;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  &__headline {
+    font-size: $font-size-subheading;
+    color: inherit;
+  }
+}
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-sm) {
+  .discover {
+
+    &__headline {
+      font-size: $font-size-title-lg;
+    }
+  }  
+}

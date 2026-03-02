@@ -1,0 +1,308 @@
+@use 'sass:color';
+@use '../../../styles/variables' as *;
+
+/* ===========================
+* MenuCard
+============================== */
+.topMenu {
+  padding: $section-page-padding;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    font-family: $heading-font;
+  }
+  
+  &__heading {
+    font-size: $font-size-heading;
+  }
+  
+  &__subheading {
+    font-size: $font-size-kicker;
+  }
+  
+  &__icon {
+    margin-left: 0.5rem;
+  }
+  
+  // Menu Card
+  &Container {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+  
+  &__card {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  &__cardFull {
+    grid-column: span 2;
+  }
+
+  &__content {
+    position: relative;
+  }
+  
+  &__imgContainer {
+    height: fit-content;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.001),
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7)
+    );
+    padding: 0 30px 15px;
+    color: $color-primary;
+  }
+
+  &__detailsFull {
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+  }
+  
+  &__title {
+    color: $color-primary;
+    font-family: $body-font;
+    font-size: $font-size-title-sm;
+  }
+  
+  &__text {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+  
+  &__body {
+    flex: 0.75;
+    text-align: left;
+    font-size: $font-size-body-md;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  
+  &__price {
+    flex-basis: 50px;
+    font-size: $font-size-title-sm;
+    font-weight: 600;
+  }
+}
+
+// Details Left
+.topMenu__detailLeft {
+  flex: 0.64;
+}
+
+// Detail Right
+.topMenu__detailRight {}
+
+// Kicker
+.kicker {
+  font-size: $font-size-kicker;
+  position: relative;
+  margin-bottom: -0.5rem;;
+
+  &::before {
+    content: "~";
+    position: absolute;
+    top: 10%;
+    left: -40%;
+    font-size: 2.2rem;
+  }
+
+  &::after {
+    content: "~";
+    position: absolute;
+    top: 10%;
+    right: -25%;
+    font-size: 2.2rem;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+// Reviewer
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  
+  &__blockquote {
+  }
+
+  &__quote {
+    text-align: right;
+    margin-bottom: 0.5rem;
+    font-size: $font-size-body-md;
+    font-weight: 300;
+  }
+
+  &__reviewer {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  &__reviewerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  &__avatar {
+    aspect-ratio: 1 / 1;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    img {
+      background: red;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  &__reviewerInfo {
+    font-size: $font-size-body-sm;
+    font-weight: 400;
+  }
+  
+  &__brandContainer {
+    width: 120px;
+  }
+  
+  &__brand {
+  }
+}
+
+/* ===========================
+* Responsive style
+============================== */
+@media (max-width: $breakpoint-tablet-lg) {
+  .topMenu {
+    padding: $section-page-padding-tablet;
+
+    &__heading {
+      font-size: $font-size-subheading;
+    }
+
+    // Menu Card
+    &Container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text {
+      width: 100%;
+    }
+
+    &__price {
+      flex: 0.25;
+      text-align: right;
+    }
+  }
+
+  .review {
+    display: none;
+  }
+
+  // Details Left
+  .topMenu__detailLeft {
+    flex: 1;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .topMenu {
+    &__details {
+      background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.001),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.55)
+      );
+      padding: 1rem;
+    }
+
+    &__body {
+      font-size: $font-size-body-sm;
+      display: -webkit-box;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &__price {
+      font-size: $font-size-body-xl;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-lg) {
+  .topMenu {
+    &__details {
+      background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.001),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.65)
+      );
+      gap: 0.25rem;
+    }
+
+    &__title {
+      font-size: $font-size-body-xl;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-md) {
+  .topMenu {
+
+    &__title {
+      // font-size: $font-size-body-lg;
+    }
+  }
+}

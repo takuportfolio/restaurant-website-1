@@ -1,0 +1,33 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss' as *;
+
+/* ===========================
+* Gallery
+============================== */
+.eventGallery {
+  
+  &__showcase {
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: auto;
+    // grid-template-areas: 
+    //   "img1 img2 img2 img3"; // Define areas for each image
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+// .eventGallery__img {
+
+//   &:nth-of-type(1) {
+//     grid-area: img1;
+//   }
+
+//   &:nth-of-type(2) {
+//     grid-area: img2;
+//   }
+
+//   &:nth-of-type(3) {
+//     grid-area: img3;
+//   }
+// }

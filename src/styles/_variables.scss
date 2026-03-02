@@ -1,0 +1,82 @@
+/* ===========================
+* Colors
+============================== */
+$color-primary: #EFF0EB;                  // Main background or primary color
+$color-secondary: #161511;                // Secondary elements or text
+$color-tertiary: #1C2838;                 // Tertiary elements in design
+$color-accent-light: hsl(35, 54%, 67%);   // Lighter accent color for highlights or hover states
+$color-accent: hsl(35, 54%, 35%);          // Standard accent color for buttons or key elements
+$color-accent-dark: hsla(33, 53%, 40%, 0.9); // Darker variant of accent for overlays or shadows
+$color-accent-transparent: hsla(35, 54%, 67%, 0.5); // Semi-transparent light accent for backgrounds
+$color-black-dark: #141D1F;                  // Darker shades for borders or backgrounds
+$color-border: #161511;                   // Color used for borders
+$color-input-field-bg: #FFFFFF;           // Background color for input fields
+// Overlay
+$color-overlay-bg: linear-gradient(
+  212deg, rgba(255, 255, 255, 0.8) 0%,
+  rgba(0, 0, 0, 1) 65%,
+  rgba(0, 0, 0, 1) 100%
+);                                           // Background for overlays
+$color-overlay-bg-hero: linear-gradient(
+  to left bottom,
+  rgba(255, 255, 255, 0.01),
+  rgba(0, 0, 0, 0.4)
+);
+
+$color-overlay-bg-dark: linear-gradient(
+  to left bottom,
+  rgba(0, 0, 0, 0.25), 
+  rgba(0, 0, 0, 0.35)
+);
+
+$color-overlay-bg-light: linear-gradient(
+  to left bottom,
+  rgb(216, 178, 126, 0.35),
+  rgb(216, 178, 126, 0.35)
+);
+
+// Shadow
+$color-shadow: 15px 13px 0 -5px hsla(35, 54%, 67%, 0.5);
+
+/* ===========================
+* Typeface
+============================== */
+$heading-font: 'Playball', cursive;
+$body-font: 'Roboto', sans-serif;
+
+/* Font sizes converted to rems */
+$font-size-heading: 4rem;        // 64px / 16 = 4rem
+$font-size-subheading: 3rem;     // 48px / 16 = 3rem
+$font-size-title-lg: 2.25rem;    // 36px / 16 = 2.25rem
+$font-size-title-md: 2rem;       // 32px / 16 = 2rem
+$font-size-title-sm: 1.5rem;     // 24px / 16 = 1.5rem
+$font-size-kicker: 1.5rem;       // 24px / 16 = 1.5rem
+$font-size-quote: 1.25rem;       // 20px / 16 = 1.25rem
+$font-size-body-xl: 1.3125rem;   // 21px / 16 ≈ 1.3125rem
+$font-size-body-lg: 1.125rem;    // 18px / 16 = 1.125rem
+$font-size-body-md: 1rem;        // 16px / 16 = 1rem
+$font-size-body-sm: 0.875rem;    // 14px / 16 = 0.875rem
+$font-size-body-xs: 0.6875rem;   // 11px / 16 ≈ 0.6875rem
+
+/* ===========================
+* Box style
+============================== */
+$section-page-padding: 112px 60px;
+$section-page-padding-sm: 40px 60px;
+$section-page-padding-tablet: 2rem 1rem;
+
+/* ===========================
+* Breakpoint
+============================== */
+$breakpoint-large-screen: 1980px;
+$breakpoint-desktop: 1440px;
+$breakpoint-laptop: 1024px;
+$breakpoint-tablet-lg: 991px;
+$breakpoint-tablet-md: 860px;
+$breakpoint-tablet-sm: 768px;
+$breakpoint-mobile-landscape: 767px;
+$breakpoint-mobile-portrait-xl: 468px;
+$breakpoint-mobile-portrait-lg: 425px;
+$breakpoint-mobile-portrait-md: 375px;
+$breakpoint-mobile-portrait-sm: 360px;
+$breakpoint-mobile-portrait-xs: 320px;

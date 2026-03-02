@@ -1,0 +1,174 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss' as *;
+
+.footer {
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: $font-size-body-sm;
+  
+  &__sectionTop {
+    padding: 18px 332px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+}
+
+.sitemapContainer {
+  max-width: 776px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.sitemap {
+  flex: 0.6;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  &__item {
+    
+  }
+  
+  &__link {
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+
+.social {
+  flex: 1;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 2.6rem;
+    list-style: none;
+  }
+
+  &__item {
+    
+  }
+  
+  &__link {
+    font-size: 24px;
+    font-weight: 600;
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  
+}
+
+.conditional {
+  width: 100%;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+  }
+  
+  &__item {
+    
+  }
+  
+  &__link {
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: not-allowed;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+.footer__sectionBottom {
+  text-align: center;
+}
+
+.footer__copyright {
+  
+}
+
+.footer__text {
+  
+}
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-lg) {
+  .footer { 
+
+    &__sectionTop {
+      padding: unset;
+    }
+  }
+
+  .sitemapContainer {
+    max-width: unset;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .conditional {
+    &__list {
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-lg) {
+  .conditional {
+    
+    &__list {
+      flex-direction: column;
+    }
+  }
+
+  .sitemap {
+  
+    &__list {
+      gap: 1rem;
+    }
+  } 
+}
+
+@media (max-width: $breakpoint-mobile-portrait-sm) {
+
+  .sitemapContainer {
+    flex-direction: column;
+  }
+
+  .sitemap {
+  
+    &__list {
+      gap: 2rem;
+    }
+  } 
+}
+

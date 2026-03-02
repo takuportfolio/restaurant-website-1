@@ -1,0 +1,53 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss' as *;
+
+/* ===========================
+* Explore more
+============================== */
+.explore {
+  // max-width: 1322px;
+  padding: $section-page-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  
+  &__header {
+  
+  }
+  
+  &__title {
+    line-height: 120%;
+    font-size: $font-size-heading;
+    font-weight: 400;
+    color: inherit;
+  }
+  
+  &__showcase {
+    max-width: 1322px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+  
+  &__imgContainer {
+    max-width: 424px;
+    max-height: 424px;
+  }
+}
+
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-lg) {
+  .explore { 
+    padding: $section-page-padding-tablet;
+
+    &__title {
+      font-size: $font-size-subheading;
+    }
+  }
+}

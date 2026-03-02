@@ -1,0 +1,63 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss' as *;
+
+.btn {
+  width: 100%;
+  font-weight: 700;
+  font-size: $font-size-body-lg;
+  padding: 12px 24px;  
+  cursor: pointer;
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 250ms ease-in;
+  z-index: 5;
+  white-space: nowrap;
+  
+  &--primary {
+    background: $color-accent-light;
+    color: $color-secondary;
+    border-color: $color-accent-light;
+
+    &:hover {
+      background: color.adjust($color-accent-light,$lightness: 5%);
+      color: $color-secondary;
+      border-color: color.adjust($color-accent-light, $lightness: 5%);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+      background: $color-accent-light;
+      color: $color-secondary;
+      border-color: $color-accent-light;
+    }
+  }
+
+  &--reserve {
+    background: $color-secondary;
+    color: $color-primary;
+    border-color: $color-secondary;
+
+    &:hover {
+      background: $color-accent-light;
+      color: $color-secondary;
+      border-color: $color-accent-light;
+    }
+  }
+
+  &--signup {
+    background: $color-primary;
+    color: $color-secondary;
+    border-color: $color-secondary;
+
+    &:hover {
+      background: $color-accent-light;
+      color: $color-secondary;
+      border-color: $color-accent-light;
+    }
+  }
+}

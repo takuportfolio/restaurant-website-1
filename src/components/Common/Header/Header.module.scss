@@ -1,0 +1,148 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss' as * ;
+
+/* ===========================
+* Header
+============================== */
+.header {
+  padding: 0 64px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $color-primary;
+  border-bottom: 1px solid $color-secondary;
+}
+
+.logoContainer {
+  margin-left: -20px;
+}
+
+.navbar {
+
+  // On desktop, the mobile-specific button should be hidden
+  &__btnMobileReserve {
+    display: none;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    font-size: $font-size-body-md;
+    font-weight: 600;
+
+    &:hover {
+      color: $color-accent;
+      border-color: $color-accent-light;
+    }
+  }
+  
+  &__icon {
+    width: 32px;
+    height: 32px;
+    padding: 1rem;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+/* ===========================
+* Mobile screen
+============================== */
+@media (min-width: $breakpoint-laptop) {
+  
+}
+
+@media (max-width: $breakpoint-tablet-md) {
+  .header {
+    height: 60px;
+  }
+
+  .navbar {
+    margin-top: 60px; // Adjusted for header height
+    padding: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: $color-primary; // Ensure background is set
+    opacity: 0.95;
+    display: flex; // Keep it flex so children arrange correctly
+    flex-direction: column; // To stack menu items vertically
+    justify-content: center;
+    transform: translateY(-100%);
+    visibility: hidden;
+
+    &.open {
+      animation: slideIn 0.25s forwards;
+    }
+    
+    &.hidden {
+      animation: slideOut 0.25s forwards;
+    }
+
+    &__linkMobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    // On desktop, the mobile-specific button should be hidden
+    &__btnMobileReserve {
+      display: block;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    &__btnReserve {
+      display: none;
+    }
+
+    &__link {
+      font-size: $font-size-title-sm;
+    }
+
+    &__icon {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet-lg) {
+  .header {
+    padding: 0 1rem;
+  }
+}
+
+// Animation
+@keyframes slideOut {
+  from {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+  
+  to {
+    transform: translateY(-100%);
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    display: none;
+    visibility: hidden;
+  }
+  
+  to {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}

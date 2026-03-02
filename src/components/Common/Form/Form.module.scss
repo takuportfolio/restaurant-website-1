@@ -1,0 +1,72 @@
+@use 'sass:color';
+@use '../../styles/_variables.scss';
+
+:root {
+  --image1: url('../../assets/images/events/image-1.png');
+  --image2: url('../../assets/images/events/image-2.png');
+}
+
+/* ===========================
+* Book a Table
+============================== */
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 1rem;
+
+  &__fieldItem {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: none;
+  }
+
+  &__fieldItem:last-child {
+    margin-top: 1rem;
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__input {
+    min-height: 34px;
+    width: 100%;
+    padding: 0 6px;
+    outline: variables.$color-accent;
+    border: none;
+    border-bottom: 1px solid variables.$color-accent;
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+input {
+
+  &::placeholder {
+    color: variables.$color-primary;
+    opacity: 0.8;
+  }
+}
+
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  // background-image: url();
+  color: variables.$color-primary;
+  opacity: 0.8;
+  appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 24px;
+  height: 24px;
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+.form__row--full {
+  grid-column: 1 / -1;
+}

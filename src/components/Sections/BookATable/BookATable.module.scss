@@ -1,0 +1,167 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss' as *;
+
+/* ===========================
+* Book a Table
+============================== */
+.bookingForm {
+  padding: 60px 64px;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  
+  &__container {
+    max-width: 910px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &__content {
+    flex: 0.5;
+    min-width: 340px;
+    padding: 125px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  &__heading {
+    width: 100%;
+    font-size: $font-size-title-md; 
+  }
+
+  &__description {
+    font-size: $font-size-body-md;
+    font-weight: 200;
+  }
+}
+
+.formContainer {
+  flex: 0.5;
+  padding: 60px 48px;
+  height: 480px;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  background-color: $color-tertiary;
+  color: $color-primary;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: $font-size-title-sm;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: $font-size-body-lg;
+    font-weight: 400;
+    width: 250px;
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 1rem;
+
+  &__fieldItem {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: none;
+  }
+
+  &__fieldItem:last-child {
+    margin-top: 1rem;
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__input {
+    min-height: 48px;
+    padding: 0 6px;
+    outline: $color-accent;
+    border: none;
+    border-bottom: 1px solid $color-accent;
+    background-color: $color-primary;
+    color: inherit;
+  }
+}
+
+.form__row--full {
+  grid-column: 1 / -1;
+}
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-lg) {
+  .bookingForm {
+
+  }  
+}
+
+@media (max-width: $breakpoint-tablet-md) {
+  .bookingForm {
+    padding: $section-page-padding-tablet;
+    
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content {
+      flex: 1;
+      padding: 30px 60px;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .bookingForm {
+
+  }
+
+  .formContainer {
+    padding: 30px 60px;
+    height: 100%;
+    display: inline-block;
+
+    &__text {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+
+    &__input {
+      min-width: 250px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+
+  .formContainer {
+    // padding: 2rem;
+  }
+}

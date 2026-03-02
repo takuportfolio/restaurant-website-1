@@ -1,0 +1,62 @@
+@use 'sass:color';
+@use '../../../../styles/variables' as *;
+
+/* ===========================
+* SpecialMenuBlock
+============================== */
+// Special menu block
+.specialMenuBlock {
+  padding: $section-page-padding-sm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__img {
+    max-width: 310px;
+    max-height: 250px;
+  }
+  
+  &__heading {
+    font-size: $font-size-subheading;
+    white-space: nowrap;
+  }
+}
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-lg) {
+  .specialMenuBlock {
+    padding: $section-page-padding-tablet;
+    padding-block-start: 0;
+
+    &__img {
+      max-width: 260px;
+      max-height: 200px;
+    }
+    
+    &__heading {
+      font-size: $font-size-title-lg;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet-sm) {
+  .specialMenuBlock {
+    gap: 2rem;
+
+    &__img {
+      max-width: 210px;
+      max-height: 150px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .specialMenuBlock {
+
+    &__heading {
+      font-size: $font-size-title-sm;
+    }
+  }
+}

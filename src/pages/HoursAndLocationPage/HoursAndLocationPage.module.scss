@@ -1,0 +1,88 @@
+@use 'sass:color';
+@use '../../styles/_variables.scss' as *;
+
+/* ===========================
+* HoursAndLocation
+============================== */
+.hoursAndLocation {
+  padding: $section-page-padding;
+
+  &__content {
+    padding-bottom: 80px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    font-family: $body-font;
+    text-align: center;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__titleContainer {
+    
+  }
+
+  &__title {
+  //  font-family: inherit;
+   font-size: $font-size-heading;
+   font-weight: 700;
+   line-height: 120%;
+  }
+
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__text {
+    font-size: $font-size-body-lg;
+    font-weight: 400;
+  }
+
+  &__mapContainer {
+    width: 100%;
+  }
+
+  &__map {
+    border: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: $breakpoint-tablet-sm) {
+  .hoursAndLocation {
+    padding: $section-page-padding-tablet;
+
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .hoursAndLocation {
+    
+    &__title {
+      font-size: $font-size-subheading;
+     }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .hoursAndLocation {
+    
+    &__textContainer {
+      gap: 0.5rem;
+    }
+    
+    &__text {
+      font-size: $font-size-body-md;
+    }
+  }
+}
