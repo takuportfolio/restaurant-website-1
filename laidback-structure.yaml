@@ -1,0 +1,78 @@
+laidback/
+|-- client/
+			|-- public/
+					|-- index.html
+					|-- favicon.ico
+					|-- ...
+			|-- src/
+					|-- assets?
+					|		  |-- images/
+					|			|-- fonts/
+					|-- components/
+						|-- Button/
+						|		|-- Button.module.scss
+						|		|-- Button.tsx
+						|		|-- index.ts
+						|-- Form/
+						|		|-- Form.module.scss
+						|		|-- Form.tsx
+						|		|-- index.ts
+						|-- Gallery/
+						|		|-- Gallery.module.scss
+						|		|-- Gallery.tsx
+						|		|-- index.ts
+						|-- Header/
+						|		|-- Header.module.scss
+						|		|-- Header.tsx
+						|		|-- index.ts
+						|-- Footer/
+						|		|-- Footer.module.scss
+						|		|-- Footer.tsx
+						|		|-- index.ts
+					|--hooks/
+						|-- useAuth.ts
+					|-- layouts/
+						|-- MainLayout.tsx
+					|-- pages/
+							|-- HomePage/
+									|-- HomePage.module.scss
+									|-- HomePage.tsx
+									|-- index.ts
+							|-- HoursAndLocation/
+									|-- HoursAndLocation.module.scss
+									|-- HoursAndLocation.tsx
+									|-- index.ts
+							|-- Menu/
+									|-- Menu.module.scss
+									|-- Menu.tsx
+									|-- index.ts
+							|-- AboutUs/
+									|-- AboutUs.module.scss
+									|-- HomAboutUsePage.tsx
+									|-- index.ts
+							|-- Events/
+									|-- Events.module.scss
+									|-- Events.tsx
+									|-- index.ts
+							|-- ReservationPage/
+									|-- ReservationPage.module.scss
+									|-- ReservationPage.tsx
+									|-- index.ts
+					|-- redux/
+							|-- actions/
+									|-- menuActions.ts
+					|-- services/
+							|-- api.ts
+					|-- styles/
+							|-- main.scss
+							|-- variables.scss
+							|-- mixins.scss
+							|-- global.scss
+					|-- utils/
+								|-- helpers.ts
+					|-- App.tsx
+					|-- Index.tsx
+					|-- package.json
+					|-- tsconfig.json
+					|-- jsconfig.json
+					|-- README.md
